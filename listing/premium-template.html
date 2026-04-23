@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe's Café Dubai — Premium Listing | Dubai Coffee Guide</title>
+  <meta name="description" content="Joe's Café Dubai premium listing — Fashion Avenue, Dubai Mall. Rated 4.9★ by 25,198 visitors. View menu, hours, and more.">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Joe's Café Dubai — Premium Listing">
+  <meta property="og:description" content="Joe's Café Dubai — Rated 4.9★ by 25,198 visitors. Premium coffee experience in Downtown Dubai.">
+  <meta property="og:image" content="../assets/images/listings/joe-s-caf-dubai.webp">
+  <meta property="og:type" content="place">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Joe's Café Dubai",
+    "description": "Premium specialty café in Fashion Avenue, Dubai Mall. One of Dubai's most loved coffee destinations.",
+    "address": "Fashion Avenue First Floor, Dubai Mall Star Atrium - Gate 6 - Burj Khalifa - Downtown Dubai",
+    "telephone": "043200040",
+    "geo": { "@type": "GeoCoordinates", "latitude": 25.196285, "longitude": 55.2774144 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "25198" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="../index.html" class="nav__link">Home</a>
+        <a href="../listings.html" class="nav__link">Coffee Shops</a>
+        <a href="../category/specialty.html" class="nav__link">Specialty</a>
+        <a href="../category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="../blog.html" class="nav__link">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+        <a href="../contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="../premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="https://dubai.fond.coffee/get-site" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <!-- ═══ BREADCRUMB ═══ -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <a href="../category/specialty.html">Specialty Coffee</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Joe's Café Dubai <span class="premium-badge" style="margin-left: 0.5rem;"><i data-lucide="shield-check" style="width:12px;height:12px;"></i> Premium Verified</span></span>
+    </div>
+  </div>
+
+  <!-- ═══ PREMIUM HERO — Full-width with parallax ═══ -->
+  <div class="premium-hero" style="background-image: url('../assets/images/listings/joe-s-caf-dubai.webp');">
+    <div class="premium-hero__overlay">
+      <div class="container">
+        <span class="premium-badge" style="margin-bottom: 1rem;"><i data-lucide="shield-check" style="width:14px;height:14px;"></i> Premium Verified</span>
+        <h1>Joe's Café Dubai</h1>
+        <div class="card-rating" style="margin-bottom: 0.5rem;">
+          <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+          <span class="rating-number" style="color: #fff;">4.9</span>
+          <span class="review-count" style="color: rgba(255,255,255,0.8);">(25,198 reviews)</span>
+        </div>
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9375rem;">Specialty Coffee · Fashion Avenue, Dubai Mall · Downtown Dubai</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SPLIT SECTION ═══ -->
+  <section class="premium-split">
+    <div class="premium-split__image">
+      <img src="../assets/images/listings/joe-s-caf-dubai.webp" alt="Joe's Café interior" width="800" height="600">
+    </div>
+    <div class="premium-split__info">
+      <span class="listing-header__category">Specialty Coffee · Downtown Dubai</span>
+      <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">About Joe's Café</h2>
+      <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+        Joe's Café Dubai is one of the most beloved coffee destinations in the city. Located in the prestigious Fashion Avenue wing of Dubai Mall, we've been serving exceptional specialty coffee since day one. With over 25,000 reviews and a 4.9-star rating, our commitment to quality speaks for itself.
+      </p>
+      <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+        Our beans are sourced directly from award-winning farms across Ethiopia, Colombia, and Guatemala, and roasted to perfection by our expert team. Every cup tells a story of craftsmanship and passion.
+      </p>
+      <div class="quick-actions">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=25.196285,55.2774144" class="quick-action-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="navigation"></i> Get Directions</a>
+        <a href="tel:043200040" class="quick-action-btn"><i data-lucide="phone"></i> Call</a>
+        <button class="quick-action-btn" id="shareBtn"><i data-lucide="share-2"></i> Share</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VIDEO SECTION ═══ -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="section__label">Experience</span>
+      <h2 class="section__title">Take a Virtual Tour</h2>
+      <p class="section__subtitle">Step inside Joe's Café and experience our atmosphere.</p>
+      <div class="video-placeholder">
+        <i data-lucide="play-circle"></i>
+        <p style="font-size: 0.875rem;">Video content would appear here</p>
+        <p style="font-size: 0.75rem; opacity: 0.6;">Cafe owners can embed their promotional video</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DIGITAL MENU ═══ -->
+  <section class="section">
+    <div class="container">
+      <span class="section__label">Our Menu</span>
+      <h2 class="section__title">Signature Drinks & Bites</h2>
+      <p class="section__subtitle">Hand-crafted with premium ingredients.</p>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #D4A574, #6F4E37); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="coffee" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Signature Flat White</div>
+            <div class="menu-item__price">AED 28</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #8B6F47, #C8A96E); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="cup-soda" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Cold Brew</div>
+            <div class="menu-item__price">AED 32</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #A0785A, #E0BA8E); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="cookie" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Pistachio Latte</div>
+            <div class="menu-item__price">AED 35</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #6F4E37, #B8936A); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="sandwich" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Avocado Toast</div>
+            <div class="menu-item__price">AED 48</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #C8860A, #E8C87A); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="cake-slice" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Croissant Basket</div>
+            <div class="menu-item__price">AED 38</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #4A3224, #8B6F47); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="glass-water" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Matcha Latte</div>
+            <div class="menu-item__price">AED 30</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #D4A574, #F5EDE0); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="salad" style="width: 48px; height: 48px; color: rgba(111,78,55,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Açaí Bowl</div>
+            <div class="menu-item__price">AED 52</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #3B2314, #6F4E37); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="coffee" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Espresso Double</div>
+            <div class="menu-item__price">AED 22</div>
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item__image" style="background: linear-gradient(135deg, #A87008, #E0BA8E); display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="ice-cream-cone" style="width: 48px; height: 48px; color: rgba(255,255,255,0.6);"></i>
+          </div>
+          <div class="menu-item__body">
+            <div class="menu-item__name">Affogato</div>
+            <div class="menu-item__price">AED 36</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOURS & MAP ═══ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start;">
+        <div>
+          <h2 class="section__title" style="margin-bottom: 1.5rem;">Opening Hours</h2>
+          <table class="hours-table">
+            <tbody>
+              <tr><td>Mon</td><td>9:00 AM – 11:30 PM</td></tr>
+              <tr><td>Tue</td><td>9:00 AM – 11:30 PM</td></tr>
+              <tr><td>Wed</td><td>9:00 AM – 11:30 PM</td></tr>
+              <tr><td>Thu</td><td>9:00 AM – 11:30 PM</td></tr>
+              <tr><td>Fri</td><td>9:00 AM – 12:30 AM</td></tr>
+              <tr><td>Sat</td><td>9:00 AM – 12:30 AM</td></tr>
+              <tr><td>Sun</td><td>9:00 AM – 12:30 AM</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 1.5rem;">
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 0.5rem;"><i data-lucide="map-pin" style="width: 14px; height: 14px; display: inline; vertical-align: middle;"></i> Fashion Avenue First Floor, Dubai Mall Star Atrium - Gate 6 - Downtown Dubai</p>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);"><i data-lucide="phone" style="width: 14px; height: 14px; display: inline; vertical-align: middle;"></i> <a href="tel:043200040" style="color: var(--color-primary);">04 320 0040</a></p>
+          </div>
+        </div>
+        <div>
+          <h2 class="section__title" style="margin-bottom: 1.5rem;">Location</h2>
+          <div class="listing-map" id="listingMap" data-lat="25.196285" data-lng="55.2774144"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PREMIUM ANALYTICS CTA ═══ -->
+  <section class="section text-center">
+    <div class="container">
+      <i data-lucide="bar-chart-3" style="width: 48px; height: 48px; color: var(--color-accent); margin: 0 auto 1rem;"></i>
+      <h2 class="section__title">Track Your Page Performance</h2>
+      <p class="section__subtitle" style="margin: 0 auto 2rem;">Premium members get access to detailed analytics — page views, click-through rates, and customer engagement metrics.</p>
+      <a href="../contact.html" class="btn btn-gold btn-lg"><i data-lucide="trending-up"></i> View Analytics Dashboard</a>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING TIERS ═══ -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="section__label">For Cafe Owners</span>
+        <h2 class="section__title">Listing Plans</h2>
+        <p class="section__subtitle" style="margin: 0 auto;">Choose the plan that's right for your business. Upgrade anytime.</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- Standard -->
+        <div class="pricing-card">
+          <div class="pricing-card__name">Standard</div>
+          <div class="pricing-card__price">$15</div>
+          <div class="pricing-card__period">per month</div>
+          <ul class="pricing-card__features">
+            <li>Basic listing page</li>
+            <li>Photo gallery (up to 5)</li>
+            <li>Contact information</li>
+            <li>Map & directions</li>
+            <li>Opening hours</li>
+          </ul>
+          <a href="../contact.html" class="btn btn-outline btn-block">Get Started</a>
+        </div>
+
+        <!-- Premium (featured) -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__name">Premium</div>
+          <div class="pricing-card__price">$49</div>
+          <div class="pricing-card__period">per month</div>
+          <ul class="pricing-card__features">
+            <li>Everything in Standard</li>
+            <li>Verified badge</li>
+            <li>Priority placement</li>
+            <li>Digital menu</li>
+            <li>Video embed</li>
+            <li>No competitor ads</li>
+            <li>Basic analytics</li>
+          </ul>
+          <a href="../contact.html" class="btn btn-primary btn-block">Get Premium</a>
+        </div>
+
+        <!-- Elite -->
+        <div class="pricing-card">
+          <div class="pricing-card__name">Elite</div>
+          <div class="pricing-card__price">$99</div>
+          <div class="pricing-card__period">per month</div>
+          <ul class="pricing-card__features">
+            <li>Everything in Premium</li>
+            <li>Featured on homepage</li>
+            <li>Sponsored card placement</li>
+            <li>Advanced analytics</li>
+            <li>Social media promotion</li>
+            <li>Dedicated account manager</li>
+            <li>Custom branding</li>
+          </ul>
+          <a href="../contact.html" class="btn btn-gold btn-block">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Directory</h4>
+          <ul class="footer__links">
+            <li><a href="../listings.html">All Coffee Shops</a></li>
+            <li><a href="../category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="../category/roastery.html">Roasteries</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li><a href="../premium-listing.html">Premium Listing</a></li>
+            <li><a href="https://dubai.fond.coffee/get-site">Get a fond.coffee Site</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="../listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="../listings.html#area=Marina">Marina</a></li>
+            <li><a href="../listings.html#area=DIFC">DIFC</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../assets/js/cafes-data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

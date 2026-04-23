@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Dubai Coffee Guide</title>
+  <meta name="description" content="Your ultimate guide to the best coffee shops, specialty roasters, and cafes across Dubai.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="Page Not Found | Dubai Coffee Guide">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="nav__container">
+      <a href="/" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">coffee Guide</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/#categories" class="nav__link">Categories</a>
+        <a href="/#listings" class="nav__link">Coffee Shops</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="https://wa.me/971501234567" class="btn btn-primary nav__cta" target="_blank" rel="noopener">Add Your Cafe</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ BREADCRUMB ═══ -->
+  <div class="breadcrumb">
+    <div class="breadcrumb__container">
+      <a href="/">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Page Not Found</span>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE CONTENT ═══ -->
+  <main class="page-main" id="404">
+    <div class="section__container">
+      <div class="page-header">
+        <h1 class="page-header__title">Page Not Found</h1>
+      </div>
+      <div class="page-body">
+        <div class="error-page">
+  <h2>404</h2>
+  <p>The page you're looking for doesn't exist.</p>
+  <a href="/" class="btn btn-primary">Back to Home</a>
+</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="./assets/js/directory.js"></script>
+</body>
+</html>

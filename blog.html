@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Dubai Coffee Guide</title>
+  <meta name="description" content="Explore articles about Dubai's coffee scene: specialty roasters, best neighborhoods for coffee, culture, reviews, and more.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Blog — Dubai Coffee Guide">
+  <meta property="og:description" content="Articles and guides about Dubai's vibrant coffee scene.">
+  <meta property="og:image" content="assets/images/og-image.webp">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="listings.html" class="nav__link">Coffee Shops</a>
+        <a href="category/specialty.html" class="nav__link">Specialty</a>
+        <a href="category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="blog.html" class="nav__link active">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="get-site.html" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <!-- ═══ BREADCRUMB ═══ -->
+  <div class="breadcrumb">
+    <div class="breadcrumb__container container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Blog</span>
+    </div>
+  </div>
+
+  <!-- ═══ BLOG HEADER ═══ -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="section__header" style="text-align: center; max-width: 640px; margin: 0 auto;">
+        <span class="section__label">Our Blog</span>
+        <h1 class="section__title" style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Dubai Coffee Stories</h1>
+        <p class="section__subtitle">Guides, reviews, and insider tips from Dubai's thriving coffee scene.</p>
+      </div>
+
+      <!-- Search -->
+      <div class="blog-search-bar" style="margin: 2rem auto 0; max-width: 500px;">
+        <input type="text" id="blogSearch" placeholder="Search articles..." aria-label="Search blog articles">
+      </div>
+
+      <!-- Filters -->
+      <div class="blog-filters" style="justify-content: center; margin-top: 1rem;" id="blogFilters">
+        <button class="blog-filter-btn active" data-filter="all">All Articles</button>
+        <button class="blog-filter-btn" data-filter="guides">Guides</button>
+        <button class="blog-filter-btn" data-filter="reviews">Reviews</button>
+        <button class="blog-filter-btn" data-filter="culture">Culture</button>
+        <button class="blog-filter-btn" data-filter="neighborhoods">Neighborhoods</button>
+        <button class="blog-filter-btn" data-filter="tips">Tips & Tricks</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AD: LEADERBOARD ═══ -->
+  <div class="ad-slot ad-slot--leaderboard">Advertisement — 728×90</div>
+
+  <!-- ═══ BLOG GRID ═══ -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="blog-grid" id="blogGrid">
+
+        <!-- Article 1 -->
+        <article class="blog-card" data-category="guides">
+          <div class="blog-card__image">
+            <img src="assets/images/blog-blog-specialty.webp" alt="Top 10 Specialty Coffee Shops in Dubai" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg, var(--color-bg-alt), var(--color-border))'; this.style.display='none';">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Guides</span>
+            <h2 class="blog-card__title">Top 10 Specialty Coffee Shops You Must Visit in Dubai</h2>
+            <p class="blog-card__excerpt">Discover the most popular and highly-rated coffee spots across Dubai. From hidden gems to iconic destinations, our curated list has something for everyone.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> March 15, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 8 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card" data-category="culture">
+          <div class="blog-card__image">
+            <img src="assets/images/blog-blog-culture.webp" alt="Why Dubai Became a Coffee Capital" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg, var(--color-bg-alt), var(--color-border))'; this.style.display='none';">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Culture</span>
+            <h2 class="blog-card__title">Why Dubai Became a World-Class Coffee Destination</h2>
+            <p class="blog-card__excerpt">An insider look at why Dubai has become a world-class destination for coffee lovers. Culture, quality, and innovation come together in unexpected ways.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> March 8, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card" data-category="neighborhoods">
+          <div class="blog-card__image">
+            <img src="assets/images/blog-blog-neighborhoods.webp" alt="Best Coffee Neighborhoods in Dubai" loading="lazy"
+              onerror="this.parentElement.style.background='linear-gradient(135deg, var(--color-bg-alt), var(--color-border))'; this.style.display='none';">
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Neighborhoods</span>
+            <h2 class="blog-card__title">Coffee by Neighborhood: A Dubai Area Guide</h2>
+            <p class="blog-card__excerpt">Each neighborhood in Dubai offers a unique vibe. Here's our area-by-area breakdown to help you find the perfect spot near you.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> February 28, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 10 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card" data-category="reviews">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #3B2314 0%, #6F4E37 100%); display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9;">
+            <span style="color: rgba(255,255,255,0.6); font-family: var(--font-heading); font-size: 1.5rem;">☕</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Reviews</span>
+            <h2 class="blog-card__title">Joe's Café Dubai: A Detailed Review</h2>
+            <p class="blog-card__excerpt">With over 25,000 reviews and a 4.9 rating, Joe's Café in Fashion Avenue is the most reviewed specialty coffee spot in Dubai. Here's our honest take.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> February 20, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 5 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="blog-card" data-category="tips">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #6F4E37 0%, #C8860A 100%); display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9;">
+            <span style="color: rgba(255,255,255,0.6); font-family: var(--font-heading); font-size: 1.5rem;">✨</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Tips &amp; Tricks</span>
+            <h2 class="blog-card__title">How to Order Coffee Like a Local in Dubai</h2>
+            <p class="blog-card__excerpt">From karak chai to single-origin pour-overs — understand the coffee menu, tipping culture, and ordering etiquette at Dubai's best cafes.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> February 12, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 4 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="blog-card" data-category="guides">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #2C1A0E 0%, #4A3224 100%); display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9;">
+            <span style="color: rgba(255,255,255,0.6); font-family: var(--font-heading); font-size: 1.5rem;">🏆</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Guides</span>
+            <h2 class="blog-card__title">Best Roasteries in Dubai: Where Beans Meet Craft</h2>
+            <p class="blog-card__excerpt">From Coterra to Roasters Specialty — meet the artisan roasters transforming Dubai into a third-wave coffee capital.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> January 30, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 7 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 7 -->
+        <article class="blog-card" data-category="reviews">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #3B2314 0%, #D4A574 100%); display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9;">
+            <span style="color: rgba(255,255,255,0.6); font-family: var(--font-heading); font-size: 1.5rem;">📝</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Reviews</span>
+            <h2 class="blog-card__title">Blacksmith Coffee Al Quoz: The Hidden Gem</h2>
+            <p class="blog-card__excerpt">Tucked away in the industrial district of Al Quoz, Blacksmith Coffee Company serves some of the best single-origin brews in the city.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> January 22, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 5 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 8 -->
+        <article class="blog-card" data-category="neighborhoods">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #6F4E37 0%, #3B2314 100%); display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9;">
+            <span style="color: rgba(255,255,255,0.6); font-family: var(--font-heading); font-size: 1.5rem;">🏙️</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Neighborhoods</span>
+            <h2 class="blog-card__title">DIFC Coffee Scene: Business Bay's Best Kept Secret</h2>
+            <p class="blog-card__excerpt">The financial district isn't just about suits and skyscrapers. Discover the specialty cafes that fuel Dubai's business elite.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> January 15, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 9 -->
+        <article class="blog-card" data-category="culture">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #C8860A 0%, #6F4E37 100%); display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9;">
+            <span style="color: rgba(255,255,255,0.6); font-family: var(--font-heading); font-size: 1.5rem;">🌍</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__category">Culture</span>
+            <h2 class="blog-card__title">From Karak to Cortado: Dubai's Coffee Evolution</h2>
+            <p class="blog-card__excerpt">How Dubai's coffee culture evolved from traditional karak chai to world-class third-wave specialty — and what's coming next.</p>
+            <div class="blog-card__meta">
+              <span><i data-lucide="calendar" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> January 5, 2026</span>
+              <span><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:4px;"></i> 9 min read</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- No Results -->
+      <div id="blogNoResults" style="display:none; text-align:center; padding: 3rem; color: var(--color-text-muted);">
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">No articles found.</p>
+        <p>Try a different search term or filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AD: FOOTER ═══ -->
+  <div class="ad-slot ad-slot--footer">Advertisement — 728×90</div>
+
+  <!-- ═══ NEWSLETTER CTA ═══ -->
+  <section class="section" style="background: var(--color-bg-alt);">
+    <div class="container" style="text-align: center; max-width: 560px;">
+      <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Stay Updated</h2>
+      <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; font-size: 0.9375rem;">Get the latest coffee guides and reviews delivered to your inbox.</p>
+      <form style="display: flex; gap: 0.75rem; max-width: 440px; margin: 0 auto;" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; setTimeout(() => this.querySelector('button').textContent='Subscribe', 2000);">
+        <input type="email" placeholder="your@email.com" required style="flex:1; padding: 0.65rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-card-bg); color: var(--color-text); font-size: 0.875rem;">
+        <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene. Discover, explore, enjoy.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Explore</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html">All Coffee Shops</a></li>
+            <li><a href="category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="category/roastery.html">Roasteries</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="premium-listing.html">Premium Listing</a></li>
+            <li><a href="get-site.html">Get a fond.coffee Site</a></li>
+            <li><a href="listing/premium-template.html">Premium Listing</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="listings.html#area=Marina">Dubai Marina</a></li>
+            <li><a href="listings.html#area=DIFC">DIFC</a></li>
+            <li><a href="listings.html#area=JBR">JBR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Blog filter and search functionality
+    (function() {
+      const grid = document.getElementById('blogGrid');
+      const noResults = document.getElementById('blogNoResults');
+      const searchInput = document.getElementById('blogSearch');
+      const filterBtns = document.querySelectorAll('.blog-filter-btn');
+      if (!grid) return;
+
+      let activeFilter = 'all';
+
+      function filterArticles() {
+        const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const cards = grid.querySelectorAll('.blog-card');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const category = card.dataset.category || '';
+          const title = card.querySelector('.blog-card__title')?.textContent.toLowerCase() || '';
+          const excerpt = card.querySelector('.blog-card__excerpt')?.textContent.toLowerCase() || '';
+          const catLabel = card.querySelector('.blog-card__category')?.textContent.toLowerCase() || '';
+
+          const matchesFilter = activeFilter === 'all' || category === activeFilter;
+          const matchesSearch = !searchTerm || title.includes(searchTerm) || excerpt.includes(searchTerm) || catLabel.includes(searchTerm);
+
+          if (matchesFilter && matchesSearch) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (noResults) {
+          noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeFilter = btn.dataset.filter;
+          filterArticles();
+        });
+      });
+
+      if (searchInput) {
+        let debounce;
+        searchInput.addEventListener('input', () => {
+          clearTimeout(debounce);
+          debounce = setTimeout(filterArticles, 200);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

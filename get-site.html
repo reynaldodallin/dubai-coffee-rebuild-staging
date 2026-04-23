@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Your Dubai Business Website — yourname.dxb.fond.coffee</title>
+  <meta name="description" content="Professional, mobile-ready websites for Dubai businesses on yourname.dxb.fond.coffee. Starter $99 setup + $19/mo, Pro $249 setup + $39/mo, Growth $499 setup + $79/mo. Edit it yourself with the WYSIWYG editor.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Get Your Dubai Business Website — yourname.dxb.fond.coffee">
+  <meta property="og:description" content="Launch your Dubai business site on slug.dxb.fond.coffee. Three plans from $99 setup + $19/mo. Pro &amp; Growth include our exclusive WYSIWYG editor — edit your site yourself.">
+  <meta property="og:image" content="assets/images/og-image.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dubai.fond.coffee/get-site.html">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "dxb.fond.coffee Business Website",
+    "description": "Professional business websites for Dubai on yourname.dxb.fond.coffee. Mobile-ready, SEO optimised, hosted on Cloudflare Pages. WYSIWYG editor included on Pro and Growth plans.",
+    "brand": { "@type": "Brand", "name": "fond.coffee / TechSites A.I." },
+    "offers": [
+      { "@type": "Offer", "name": "Starter", "price": "99", "priceCurrency": "USD", "description": "$99 setup + $19/month" },
+      { "@type": "Offer", "name": "Pro", "price": "249", "priceCurrency": "USD", "description": "$249 setup + $39/month — includes WYSIWYG editor" },
+      { "@type": "Offer", "name": "Growth", "price": "499", "priceCurrency": "USD", "description": "$499 setup + $79/month — includes WYSIWYG editor" }
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* ── Get-Site page extras ── */
+
+    /* Hero */
+    .gs-hero {
+      position: relative;
+      padding: 7rem 0 5rem;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-bg) 100%);
+    }
+    .gs-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(193,130,51,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .gs-hero__badge {
+      display: inline-block;
+      background: rgba(193,130,51,0.15);
+      color: var(--color-accent);
+      border: 1px solid rgba(193,130,51,0.3);
+      border-radius: 2rem;
+      padding: 0.35rem 1.1rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+    }
+    .gs-hero__title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      color: var(--color-text);
+    }
+    .gs-hero__title span {
+      color: var(--color-accent);
+    }
+    .gs-hero__subtitle {
+      font-size: clamp(1rem, 2vw, 1.1875rem);
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+    .gs-hero__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Benefits grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .benefit-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .benefit-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-3px);
+    }
+    .benefit-card__icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      background: rgba(193,130,51,0.12);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--color-accent);
+    }
+    .benefit-card__icon svg { width: 1.25rem; height: 1.25rem; }
+    .benefit-card__title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+    .benefit-card__desc {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Showcase section */
+    .showcase {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 2.5rem;
+    }
+    .showcase__header {
+      padding: 2.5rem 2rem 2rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .showcase__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+    .showcase__title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.25rem, 3vw, 1.875rem);
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 0;
+    }
+    .showcase__stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .showcase__stat { text-align: center; }
+    .showcase__stat-num {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .showcase__stat-label {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+    .showcase__features {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0;
+    }
+    .showcase__feature {
+      padding: 1.25rem 1.5rem;
+      border-right: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    .showcase__feature i { color: var(--color-accent); width: 16px; height: 16px; flex-shrink: 0; }
+    .showcase__footer {
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .showcase__url {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+    }
+    .showcase__url span {
+      color: var(--color-accent);
+    }
+
+    /* What you get */
+    .what-you-get-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .get-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+    .get-item__check {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: rgba(193,130,51,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      margin-top: 0.1rem;
+    }
+    .get-item__check svg { width: 0.875rem; height: 0.875rem; }
+    .get-item__text {
+      font-size: 0.9375rem;
+      color: var(--color-text);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .get-item__text strong { color: var(--color-text); }
+    .get-item__text span { display: block; font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 0.2rem; }
+
+    /* Domains grid */
+    .domains-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .domain-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+      text-align: center;
+    }
+    .domain-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+    .domain-card__name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: 0.4rem;
+      word-break: break-all;
+    }
+    .domain-card__label {
+      font-size: 0.8125rem;
+      color: var(--color-text-muted);
+    }
+    .domains-tagline {
+      text-align: center;
+      font-size: 1.0625rem;
+      color: var(--color-text-muted);
+      margin-top: 2.5rem;
+      font-style: italic;
+    }
+
+    /* Bottom CTA */
+    .cta-launch {
+      background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-launch::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 50% 100%, rgba(193,130,51,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-launch__content {
+      position: relative;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .cta-launch__title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+    .cta-launch__sub {
+      font-size: 1.0625rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .cta-launch__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Pricing period override for setup + monthly */
+    .pricing-card__period--onetime {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .pricing-card__setup {
+      font-size: 0.9375rem;
+      color: var(--color-text-muted);
+      margin-top: -0.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .pricing-card__setup strong { color: var(--color-text); }
+
+    @media (max-width: 640px) {
+      .showcase__header,
+      .showcase__footer { padding: 1.5rem; }
+      .showcase__stats { padding: 1rem 1.5rem; gap: 1rem; }
+      .showcase__features { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="listings.html" class="nav__link">Coffee Shops</a>
+        <a href="category/specialty.html" class="nav__link">Specialty</a>
+        <a href="category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="get-site.html" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="gs-hero">
+    <div class="container">
+      <span class="gs-hero__badge">☕ Dubai business websites on dxb.fond.coffee</span>
+      <h1 class="gs-hero__title">Your Dubai Business,<br><span>Online in Days</span></h1>
+      <p class="gs-hero__subtitle">Professional, mobile-ready websites for Dubai businesses — launched on <strong>yourname.dxb.fond.coffee</strong>. Edit it yourself with our exclusive WYSIWYG editor. Setup from $99, plans from $19/month.</p>
+      <div class="gs-hero__actions">
+        <a href="https://dubai-coffee-rebuild.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          <i data-lucide="external-link"></i>
+          See Live Example
+        </a>
+        <a href="contact.html" class="btn btn-outline btn-lg">
+          <i data-lucide="mail"></i>
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY FOND.COFFEE ═══ -->
+  <section class="section fade-in">
+    <div class="container">
+      <span class="section__label">Why Choose Us</span>
+      <h2 class="section__title">Why fond.coffee?</h2>
+      <p class="section__subtitle">Everything your Dubai business site needs — built-in, from day one.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="globe"></i></div>
+          <div class="benefit-card__title">Global Coffee Network</div>
+          <p class="benefit-card__desc">Part of the fond.coffee family — 60+ city directories planned worldwide. Your site benefits from cross-network SEO authority.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="moon"></i></div>
+          <div class="benefit-card__title">Dark &amp; Light Mode</div>
+          <p class="benefit-card__desc">Professional design with a polished dark/light toggle. Visitors get the experience they prefer, instantly.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="map-pin"></i></div>
+          <div class="benefit-card__title">Interactive Maps</div>
+          <p class="benefit-card__desc">Leaflet-powered maps with precise coordinates on every listing — no API keys or monthly fees required.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="search"></i></div>
+          <div class="benefit-card__title">SEO Optimised</div>
+          <p class="benefit-card__desc">Full meta tags, Open Graph, JSON-LD schema.org markup on every page. Built to rank from day one.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="smartphone"></i></div>
+          <div class="benefit-card__title">Mobile-First Design</div>
+          <p class="benefit-card__desc">Responsive layout engineered for mobile. Every breakpoint tested — from 375px phones to 4K displays.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="zap"></i></div>
+          <div class="benefit-card__title">Cloudflare Pages Hosting</div>
+          <p class="benefit-card__desc">Deployed on Cloudflare's global CDN. Sub-second load times anywhere in the world, included in every package.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="bar-chart-2"></i></div>
+          <div class="benefit-card__title">Analytics &amp; Monetisation</div>
+          <p class="benefit-card__desc">Built-in analytics tracking and 6 pre-configured ad slots ready for Google AdSense or any display network.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><i data-lucide="cpu"></i></div>
+          <div class="benefit-card__title">TechSites A.I. Technology</div>
+          <p class="benefit-card__desc">Listings, copy, and images generated with precision by TechSites A.I. — consistent quality across every city.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SHOWCASE: dubai.fond.coffee ═══ -->
+  <section class="section section--alt fade-in">
+    <div class="container">
+      <span class="section__label">Our Flagship</span>
+      <h2 class="section__title">See Our Flagship: Dubai Coffee Guide</h2>
+      <p class="section__subtitle">dubai.fond.coffee is the reference implementation — the exact template your city site will be built on.</p>
+
+      <div class="showcase">
+        <div class="showcase__header">
+          <div>
+            <div class="showcase__label">Live Example</div>
+            <h3 class="showcase__title">Dubai Coffee Guide — dubai.fond.coffee</h3>
+          </div>
+          <a href="https://dubai-coffee-rebuild.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            Explore dubai.fond.coffee &rarr;
+          </a>
+        </div>
+
+        <div class="showcase__stats">
+          <div class="showcase__stat">
+            <span class="showcase__stat-num">25+</span>
+            <span class="showcase__stat-label">Coffee Shops</span>
+          </div>
+          <div class="showcase__stat">
+            <span class="showcase__stat-num">8</span>
+            <span class="showcase__stat-label">Neighborhoods</span>
+          </div>
+          <div class="showcase__stat">
+            <span class="showcase__stat-num">4.8</span>
+            <span class="showcase__stat-label">Avg Rating</span>
+          </div>
+          <div class="showcase__stat">
+            <span class="showcase__stat-num">60K+</span>
+            <span class="showcase__stat-label">Reviews</span>
+          </div>
+        </div>
+
+        <div class="showcase__features">
+          <div class="showcase__feature">
+            <i data-lucide="list"></i> 25+ curated listings
+          </div>
+          <div class="showcase__feature">
+            <i data-lucide="tag"></i> 4 category pages
+          </div>
+          <div class="showcase__feature">
+            <i data-lucide="book-open"></i> Blog section with articles
+          </div>
+          <div class="showcase__feature">
+            <i data-lucide="mail"></i> Contact &amp; submission forms
+          </div>
+          <div class="showcase__feature">
+            <i data-lucide="moon"></i> Dark mode toggle
+          </div>
+          <div class="showcase__feature">
+            <i data-lucide="map"></i> Interactive Leaflet maps
+          </div>
+          <div class="showcase__feature">
+            <i data-lucide="star"></i> Ratings &amp; reviews display
+          </div>
+          <div class="showcase__feature">
+            <i data-lucide="shield-check"></i> Premium listing template
+          </div>
+        </div>
+
+        <div class="showcase__footer">
+          <span class="showcase__url">&#9749; <span>dubai</span>.fond.coffee</span>
+          <a href="https://dubai-coffee-rebuild.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i data-lucide="external-link"></i>
+            Open Live Site
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT YOU GET ═══ -->
+  <section class="section fade-in">
+    <div class="container">
+      <span class="section__label">Complete Package</span>
+      <h2 class="section__title">What You Get</h2>
+      <p class="section__subtitle">Every dxb.fond.coffee site is delivered turnkey — no technical skills required. On Pro and Growth you keep editing it yourself with the WYSIWYG editor.</p>
+      <div class="what-you-get-grid">
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>Branded Dubai subdomain</strong>
+            <span>yourname.dxb.fond.coffee or slug.dxb.fond.coffee — your business, your brand.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>Up to 25 initial listings</strong>
+            <span>Each with photos, ratings, hours, location, and category tags.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>Custom hero images</strong>
+            <span>City-specific imagery sourced from Pexels for every key section.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>Blog section</strong>
+            <span>3 starter articles about your city's coffee scene, written and formatted.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>Contact form</strong>
+            <span>Ready-to-use form so cafe owners can submit new listings directly.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>6 ad slots</strong>
+            <span>Pre-positioned 300×250 units across key page sections for maximum CTR.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>Full SEO setup</strong>
+            <span>Meta tags, Open Graph, JSON-LD, and schema.org on every page.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>Cloudflare Pages hosting</strong>
+            <span>Global CDN deployment included — no extra hosting bill.</span>
+          </p>
+        </div>
+        <div class="get-item">
+          <div class="get-item__check"><i data-lucide="check"></i></div>
+          <p class="get-item__text">
+            <strong>GitHub repository access</strong>
+            <span>Full source code delivered to your own GitHub repo.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AD ROW (3x 300×250) ═══ -->
+  <div class="container ads-row">
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+  </div>
+
+  <!-- ═══ PRICING ═══ -->
+  <section class="section section--alt fade-in">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <span class="section__label">Simple Pricing</span>
+        <h2 class="section__title">Choose Your Plan</h2>
+        <p class="section__subtitle" style="margin: 0 auto;">One-time setup + a simple monthly plan. Hosted on yourname.dxb.fond.coffee. Cancel anytime.</p>
+      </div>
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="pricing-card__name">Starter</div>
+          <div class="pricing-card__price">$19<span style="font-size:1rem;font-weight:400;color:var(--color-text-muted);">/mo</span></div>
+          <div class="pricing-card__period pricing-card__period--onetime">+ $99 one-time setup</div>
+          <ul class="pricing-card__features">
+            <li>yourname.dxb.fond.coffee subdomain</li>
+            <li>Single-page business site</li>
+            <li>Hero, about, contact &amp; map</li>
+            <li>Mobile-ready &amp; dark/light mode</li>
+            <li>Basic SEO (meta, OG, JSON-LD)</li>
+            <li>Cloudflare Pages hosting</li>
+            <li>Assisted content edits (email us)</li>
+            <li>Upgrade anytime to the WYSIWYG editor</li>
+          </ul>
+          <a href="contact.html" class="btn btn-outline btn-block">Start with Starter</a>
+        </div>
+
+        <!-- Pro (featured) -->
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__name">Pro</div>
+          <div class="pricing-card__price">$39<span style="font-size:1rem;font-weight:400;color:var(--color-text-muted);">/mo</span></div>
+          <div class="pricing-card__period pricing-card__period--onetime">+ $249 one-time setup</div>
+          <ul class="pricing-card__features">
+            <li>Everything in Starter</li>
+            <li>slug.dxb.fond.coffee multi-page site</li>
+            <li>Up to 10 pages (services, gallery, blog)</li>
+            <li><strong>Exclusive WYSIWYG editor — edit your site yourself</strong></li>
+            <li>No code, no GitHub, no developer needed</li>
+            <li>Full SEO setup &amp; schema.org markup</li>
+            <li>Contact form &amp; lead capture</li>
+            <li>Priority email support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary btn-block">Get Pro</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="pricing-card">
+          <div class="pricing-card__name">Growth</div>
+          <div class="pricing-card__price">$79<span style="font-size:1rem;font-weight:400;color:var(--color-text-muted);">/mo</span></div>
+          <div class="pricing-card__period pricing-card__period--onetime">+ $499 one-time setup</div>
+          <ul class="pricing-card__features">
+            <li>Everything in Pro</li>
+            <li>Unlimited pages &amp; blog posts</li>
+            <li><strong>WYSIWYG editor with advanced blocks</strong></li>
+            <li>Edit yourself — or we edit for you</li>
+            <li>Analytics integration &amp; conversion tracking</li>
+            <li>Ad slots &amp; monetisation ready</li>
+            <li>Priority support (same-day response)</li>
+            <li>Monthly strategy check-in</li>
+          </ul>
+          <a href="contact.html" class="btn btn-gold btn-block">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GLOBAL NETWORK ═══ -->
+  <section class="section fade-in">
+    <div class="container">
+      <span class="section__label">Global Network</span>
+      <h2 class="section__title">Choose Your Domain</h2>
+      <p class="section__subtitle">fond.coffee is part of a broader wildcard domain network. Your city can launch under the most relevant brand.</p>
+      <div class="domains-grid">
+        <div class="domain-card">
+          <div class="domain-card__name">*.fond.coffee</div>
+          <div class="domain-card__label">Cafeterias &amp; Coffee Shops</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-card__name">*.ama.cafe</div>
+          <div class="domain-card__label">Cafés &amp; Restaurants</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-card__name">*.places.guide</div>
+          <div class="domain-card__label">Local City Guides</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-card__name">*.ht.tips</div>
+          <div class="domain-card__label">Hotels &amp; Tourism</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-card__name">*.hho.expert</div>
+          <div class="domain-card__label">Health &amp; Wellness</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-card__name">*.saas.tips</div>
+          <div class="domain-card__label">SaaS &amp; Tech Products</div>
+        </div>
+        <div class="domain-card">
+          <div class="domain-card__name">*.waas.tips</div>
+          <div class="domain-card__label">Web as a Service</div>
+        </div>
+      </div>
+      <p class="domains-tagline">Dubai businesses launch on <strong>dxb.fond.coffee</strong> — pick your slug and go.</p>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BOTTOM ═══ -->
+  <section class="section cta-launch fade-in">
+    <div class="container">
+      <div class="cta-launch__content">
+        <h2 class="cta-launch__title">Ready to Launch on dxb.fond.coffee?</h2>
+        <p class="cta-launch__sub">Tell us your business and we'll handle setup — yourname.dxb.fond.coffee live in under 7 days. On Pro and Growth you edit your site yourself with our exclusive WYSIWYG editor.</p>
+        <div class="cta-launch__actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <i data-lucide="send"></i>
+            Start Now
+          </a>
+          <a href="https://dubai-coffee-rebuild.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-lg">
+            <i data-lucide="eye"></i>
+            See Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene. Discover specialty cafes, roasteries, and hidden gems across the city.</p>
+          <div class="footer__social">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Directory</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html">All Coffee Shops</a></li>
+            <li><a href="category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="category/roastery.html">Roasteries</a></li>
+            <li><a href="category/cafe-restaurant.html">Cafe &amp; Restaurant</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Add Your Cafe</a></li>
+            <li><a href="listing/premium-template.html">Premium Listing</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="listings.html#area=Marina">Dubai Marina</a></li>
+            <li><a href="listings.html#area=DIFC">DIFC</a></li>
+            <li><a href="listings.html#area=JBR">JBR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/cafes-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

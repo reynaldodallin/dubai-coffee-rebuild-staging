@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Add Your Cafe — Dubai Coffee Guide</title>
+  <meta name="description" content="Get your coffee shop listed on Dubai Coffee Guide. Contact us to add your cafe or ask questions about listing.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Contact — Dubai Coffee Guide">
+  <meta property="og:description" content="Get your coffee shop listed on Dubai Coffee Guide.">
+  <meta property="og:image" content="assets/images/og-image.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="listings.html" class="nav__link">Coffee Shops</a>
+        <a href="category/specialty.html" class="nav__link">Specialty</a>
+        <a href="category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="get-site.html" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <!-- ═══ BREADCRUMB ═══ -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Contact</span>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE HEADER ═══ -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-header__title">Add Your Cafe</h1>
+      <p class="page-header__desc">Get your coffee shop listed on Dubai's premier coffee directory. Reach thousands of coffee lovers every month.</p>
+    </div>
+  </div>
+
+  <!-- ═══ CONTACT CONTENT ═══ -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+
+        <!-- Form -->
+        <div>
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Submit Your Cafe</h2>
+          <p style="color: var(--color-text-muted); font-size: 0.9375rem; margin-bottom: 2rem;">Fill out the form below and we'll review your submission within 48 hours.</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" name="name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contactCafe">Cafe Name</label>
+              <input type="text" id="contactCafe" name="cafe" placeholder="Your Coffee Shop Name" required>
+            </div>
+            <div class="form-group">
+              <label for="contactCategory">Category</label>
+              <select id="contactCategory" name="category">
+                <option value="">Select a category...</option>
+                <option value="specialty">Specialty Coffee</option>
+                <option value="roastery">Roastery</option>
+                <option value="cafe-restaurant">Cafe & Restaurant</option>
+                <option value="chain">Chain Cafe</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" placeholder="Tell us about your cafe, location, and what makes it special..." rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Submit Listing Request</button>
+          </form>
+        </div>
+
+        <!-- Sidebar info -->
+        <div>
+          <!-- WhatsApp CTA -->
+          <div class="listing-sidebar-card" style="margin-bottom: 1.5rem;">
+            <h3>Quick Contact</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: 1rem;">Prefer to chat? Reach us directly on WhatsApp for a faster response.</p>
+            <a href="https://wa.me/971501234567" class="btn btn-whatsapp btn-block btn-lg" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="message-circle"></i> Chat on WhatsApp
+            </a>
+          </div>
+
+          <!-- Pricing preview -->
+          <div class="listing-sidebar-card listing-sidebar-card--cta" style="margin-bottom: 1.5rem;">
+            <h3>Premium Listings Available</h3>
+            <p>Stand out with verified badges, digital menus, video embeds, and priority placement. Plans start at $15/mo.</p>
+            <a href="listing/premium-template.html" class="btn btn-primary btn-block">See Premium Features</a>
+          </div>
+
+          <!-- FAQ -->
+          <div style="margin-top: 2rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Frequently Asked Questions</h2>
+
+            <details class="faq-item">
+              <summary>How much does a listing cost?</summary>
+              <p>Basic listings are free during our launch period. Premium listings with enhanced features start at $15/month. Elite packages with homepage placement and analytics are $99/month.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How long does review take?</summary>
+              <p>We typically review and publish new listings within 48 hours. Premium listings get priority review within 24 hours.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I edit my listing after it's published?</summary>
+              <p>Yes! All listing owners can request updates to their information, photos, and hours at any time. Premium members get a self-service dashboard.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>What information do I need to provide?</summary>
+              <p>At minimum, we need your cafe name, address, category, and a high-quality photo. We also recommend providing phone number, opening hours, social media links, and a description of what makes your cafe special.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do you verify listings?</summary>
+              <p>We verify listings by cross-referencing Google Maps data, calling the business, and in some cases visiting in person. Premium verified listings display a gold badge on their page.</p>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can I remove a listing?</summary>
+              <p>Yes. If you are the business owner and want your listing removed, please contact us via this form or WhatsApp and we'll process it within 24 hours.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene.</p>
+          <div class="footer__social">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Directory</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html">All Coffee Shops</a></li>
+            <li><a href="category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="category/roastery.html">Roasteries</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="premium-listing.html">Premium Listing</a></li>
+            <li><a href="get-site.html">Get a fond.coffee Site</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="listings.html#area=Marina">Marina</a></li>
+            <li><a href="listings.html#area=DIFC">DIFC</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/cafes-data.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <style>
+    @media (max-width: 768px) {
+      .section > .container > div[style*="grid-template-columns: 1fr 1fr"] {
+        display: flex !important;
+        flex-direction: column;
+      }
+    }
+  </style>
+</body>
+</html>

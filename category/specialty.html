@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialty Coffee — Dubai Coffee Guide</title>
+  <meta name="description" content="Discover Dubai&#x27;s finest specialty coffee shops — third-wave roasters, single-origin experts, and award-winning baristas.">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Specialty Coffee — Dubai Coffee Guide">
+  <meta property="og:description" content="Discover Dubai&#x27;s finest specialty coffee shops — third-wave roasters, single-origin experts, and award-winning baristas.">
+  <meta property="og:image" content="../assets/images/og-image.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="../index.html" class="nav__link">Home</a>
+        <a href="../listings.html" class="nav__link">Coffee Shops</a>
+        <a href="../category/specialty.html" class="nav__link">Specialty</a>
+        <a href="../category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="../blog.html" class="nav__link">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+        <a href="../contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="../premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="../get-site.html" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Specialty Coffee</span>
+    </div>
+  </div>
+
+  <div class="category-header">
+    <div class="container">
+      <div class="category-header__icon"><i data-lucide="coffee"></i></div>
+      <h1 class="category-header__title">Specialty Coffee</h1>
+      <p class="category-header__desc">Discover Dubai&#x27;s finest specialty coffee shops — third-wave roasters, single-origin experts, and award-winning baristas.</p>
+      <span class="category-header__count" id="categoryCount">13 listings</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="listings__grid" id="categoryGrid" data-category="specialty">
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-owner">
+    <div class="container">
+      <div class="cta-owner__content">
+        <h2 class="cta-owner__title">Own a Specialty Cafe?</h2>
+        <p class="cta-owner__desc">Get your cafe listed and reach thousands of coffee lovers in Dubai.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Add Your Cafe</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Directory</h4>
+          <ul class="footer__links">
+            <li><a href="../listings.html">All Coffee Shops</a></li>
+            <li><a href="../category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="../category/roastery.html">Roasteries</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li><a href="../premium-listing.html">Premium Listing</a></li>
+            <li><a href="../get-site.html">Get a fond.coffee Site</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="../listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="../listings.html#area=Marina">Marina</a></li>
+            <li><a href="../listings.html#area=DIFC">DIFC</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../assets/js/cafes-data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Coffee Shops — Dubai Coffee Guide</title>
+  <meta name="description" content="Browse all coffee shops in Dubai with filters by category, area, and rating. Find your perfect cafe.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="All Coffee Shops — Dubai Coffee Guide">
+  <meta property="og:description" content="Browse all coffee shops in Dubai with filters by category, area, and rating.">
+  <meta property="og:image" content="assets/images/og-image.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="listings.html" class="nav__link">Coffee Shops</a>
+        <a href="category/specialty.html" class="nav__link">Specialty</a>
+        <a href="category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="get-site.html" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <!-- ═══ STICKY SEARCH ═══ -->
+  <div class="sticky-search">
+    <div class="container">
+      <div class="search-bar" style="max-width: 100%;">
+        <i data-lucide="search" class="search-bar__icon"></i>
+        <input type="text" class="search-bar__input" id="listingSearch" placeholder="Search by name, area, or tag..." aria-label="Search">
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ BREADCRUMB ═══ -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">All Coffee Shops</span>
+    </div>
+  </div>
+
+  <!-- ═══ LISTINGS CONTENT ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="listings-page">
+        <!-- Sidebar Filters -->
+        <aside class="listings-page__sidebar" id="filterSidebar">
+          <button class="sidebar-close" id="filterClose" aria-label="Close filters">&times;</button>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Category</h3>
+            <label><input type="checkbox" data-filter-category value="specialty"> Specialty Coffee</label>
+            <label><input type="checkbox" data-filter-category value="roastery"> Roastery</label>
+            <label><input type="checkbox" data-filter-category value="cafe-restaurant"> Cafe & Restaurant</label>
+            <label><input type="checkbox" data-filter-category value="chain"> Chain Cafe</label>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Area</h3>
+            <label><input type="checkbox" data-filter-area value="Downtown"> Downtown</label>
+            <label><input type="checkbox" data-filter-area value="Marina"> Marina</label>
+            <label><input type="checkbox" data-filter-area value="Business Bay"> Business Bay</label>
+            <label><input type="checkbox" data-filter-area value="DIFC"> DIFC</label>
+            <label><input type="checkbox" data-filter-area value="JBR"> JBR</label>
+            <label><input type="checkbox" data-filter-area value="Al Quoz"> Al Quoz</label>
+            <label><input type="checkbox" data-filter-area value="Jumeirah"> Jumeirah</label>
+            <label><input type="checkbox" data-filter-area value="Creek Harbour"> Creek Harbour</label>
+            <label><input type="checkbox" data-filter-area value="Other"> Other</label>
+          </div>
+
+          <div class="filter-group">
+            <h3 class="filter-group__title">Rating</h3>
+            <label><input type="radio" name="rating" data-filter-rating value="0" checked> Any</label>
+            <label><input type="radio" name="rating" data-filter-rating value="4"> 4.0+</label>
+            <label><input type="radio" name="rating" data-filter-rating value="4.5"> 4.5+</label>
+          </div>
+
+          <button class="btn btn-primary btn-block" id="filterApply" style="margin-top: 1rem;">Apply Filters</button>
+        </aside>
+        <div class="filter-overlay" id="filterOverlay"></div>
+
+        <!-- Main Content -->
+        <div class="listings-page__main">
+          <div class="sort-bar">
+            <div>
+              <button class="filter-toggle-btn" id="filterToggle"><i data-lucide="sliders-horizontal"></i> Filters</button>
+              <span id="listingsCount" class="sort-bar__count">25 coffee shops found</span>
+            </div>
+            <select id="sortSelect" aria-label="Sort by">
+              <option value="rating">Best Rated</option>
+              <option value="reviews">Most Reviews</option>
+              <option value="name">A–Z</option>
+            </select>
+          </div>
+
+          <div class="listings__grid" id="listingsGrid"></div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AD: FOOTER BANNER ═══ -->
+  <div class="ad-slot ad-slot--footer">Advertisement — 728×90</div>
+
+  <!-- ═══ CTA OWNER ═══ -->
+  <section class="section cta-owner">
+    <div class="container">
+      <div class="cta-owner__content">
+        <h2 class="cta-owner__title">Own a Coffee Shop?</h2>
+        <p class="cta-owner__desc">Get your cafe listed and reach thousands of coffee lovers in Dubai.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Add Your Cafe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene.</p>
+          <div class="footer__social">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Directory</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html">All Coffee Shops</a></li>
+            <li><a href="category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="category/roastery.html">Roasteries</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="premium-listing.html">Premium Listing</a></li>
+            <li><a href="get-site.html">Get a fond.coffee Site</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="listings.html#area=Marina">Marina</a></li>
+            <li><a href="listings.html#area=DIFC">DIFC</a></li>
+            <li><a href="listings.html#area=JBR">JBR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/cafes-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

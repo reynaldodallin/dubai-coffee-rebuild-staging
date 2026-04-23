@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dubai Coffee Guide — Best Coffee Shops in Dubai</title>
+  <meta name="description" content="Discover the best coffee shops in Dubai. Curated directory of specialty cafes, roasteries, and coffee experiences across the city.">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dubai Coffee Guide — Best Coffee Shops in Dubai">
+  <meta property="og:description" content="Discover the best coffee shops in Dubai. Curated directory of specialty cafes, roasteries, and coffee experiences.">
+  <meta property="og:image" content="assets/images/og-image.webp">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="listings.html" class="nav__link">Coffee Shops</a>
+        <a href="category/specialty.html" class="nav__link">Specialty</a>
+        <a href="category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="get-site.html" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="assets/images/hero/hero-bg.webp" alt="" width="1920" height="1080">
+    </div>
+    <div class="container">
+      <span class="hero__badge">&#9733; Dubai's Premier Coffee Directory</span>
+      <h1 class="hero__title">Discover Dubai's Finest <span>Coffee Shops</span></h1>
+      <p class="hero__subtitle">From artisan roasteries to hidden specialty gems — find your perfect cup in the city of gold.</p>
+      <form class="search-bar" id="heroSearchForm">
+        <i data-lucide="search" class="search-bar__icon"></i>
+        <input type="text" class="search-bar__input" placeholder="Search cafes, areas, or tags..." aria-label="Search coffee shops">
+        <button type="submit" class="btn btn-primary search-bar__btn">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══ STATS BAR ═══ -->
+  <div class="stats">
+    <div class="container">
+      <div class="stats__grid">
+        <div><span class="stat__number">25+</span><span class="stat__label">Coffee Shops</span></div>
+        <div><span class="stat__number">8</span><span class="stat__label">Neighborhoods</span></div>
+        <div><span class="stat__number">4.8</span><span class="stat__label">Avg Rating</span></div>
+        <div><span class="stat__number">60K+</span><span class="stat__label">Reviews</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ AD: TOP ROW (3x 300×250) ═══ -->
+  <div class="container ads-row">
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+  </div>
+
+  <!-- ═══ CATEGORIES ═══ -->
+  <section class="section fade-in" id="categories">
+    <div class="container">
+      <span class="section__label">Browse by Type</span>
+      <h2 class="section__title">Categories</h2>
+      <p class="section__subtitle">Explore Dubai's diverse coffee scene by category.</p>
+      <div class="categories__grid">
+        <a href="category/specialty.html" class="category-card">
+          <div class="category-icon"><i data-lucide="coffee"></i></div>
+          <div class="category-name">Specialty Coffee</div>
+          <div class="category-count">14 listings</div>
+        </a>
+        <a href="category/roastery.html" class="category-card">
+          <div class="category-icon"><i data-lucide="flame"></i></div>
+          <div class="category-name">Roastery</div>
+          <div class="category-count">7 listings</div>
+        </a>
+        <a href="category/cafe-restaurant.html" class="category-card">
+          <div class="category-icon"><i data-lucide="utensils"></i></div>
+          <div class="category-name">Cafe & Restaurant</div>
+          <div class="category-count">4 listings</div>
+        </a>
+        <a href="category/chain.html" class="category-card">
+          <div class="category-icon"><i data-lucide="building-2"></i></div>
+          <div class="category-name">Chain Cafe</div>
+          <div class="category-count">1 listing</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TOP RATED ═══ -->
+  <section class="section section--alt fade-in" id="top-rated">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <span class="section__label">Curated Selection</span>
+          <h2 class="section__title">Top Rated Coffee Shops</h2>
+          <p class="section__subtitle mb-0">The highest-rated cafes in Dubai, chosen by thousands of coffee lovers.</p>
+        </div>
+        <a href="listings.html" class="btn btn-outline">View All</a>
+      </div>
+      <div class="listings__grid">
+        <!-- L'ETO — 5.0 -->
+        <article class="listing-card">
+          <a href="listing/l-eto.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/l-eto.webp" alt="L'ETO" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Specialty Coffee</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">L'ETO</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span></span>
+                <span class="rating-number">5.0</span>
+                <span class="review-count">(2,408 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> Marina Mall - Dubai Marina</p>
+              <div class="card-tags"><span class="tag">Specialty Coffee</span><span class="tag">Dubai Marina</span></div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Joe's Café — 4.9, 25198 reviews -->
+        <article class="listing-card">
+          <a href="listing/joe-s-caf-dubai.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/joe-s-caf-dubai.webp" alt="Joe's Café Dubai" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Specialty Coffee</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Joe's Café Dubai</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.9</span>
+                <span class="review-count">(25,198 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> Fashion Avenue, Dubai Mall - Downtown</p>
+              <div class="card-tags"><span class="tag">Specialty Coffee</span><span class="tag">Downtown</span><span class="tag">Popular</span></div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Roasters Dubai Mall — 4.9, 6418 reviews -->
+        <article class="listing-card">
+          <a href="listing/roasters-specialty-coffee-house-dubai-mall.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/roasters-specialty-coffee-house-dubai-mall.webp" alt="Roasters Dubai Mall" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Roastery</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Roasters Coffee House — Dubai Mall</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.9</span>
+                <span class="review-count">(6,418 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> Financial Ctr St - Downtown Dubai</p>
+              <div class="card-tags"><span class="tag">Roastery</span><span class="tag">Downtown</span><span class="tag">Popular</span></div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Roasters JBR — 4.9, 4670 reviews -->
+        <article class="listing-card">
+          <a href="listing/roasters-specialty-coffee-house-jbr-nft-gallery.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/roasters-specialty-coffee-house-jbr-nft-gallery.webp" alt="Roasters JBR & NFT Gallery" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Roastery</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Roasters JBR & NFT Gallery</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.9</span>
+                <span class="review-count">(4,670 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> Amwaj - Jumeirah Beach Residence</p>
+              <div class="card-tags"><span class="tag">Roastery</span><span class="tag">JBR</span><span class="tag">Popular</span></div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Black Sheep — 4.9 -->
+        <article class="listing-card">
+          <a href="listing/black-sheep-coffee.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/black-sheep-coffee.webp" alt="Black Sheep Coffee" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Specialty Coffee</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Black Sheep Coffee</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.9</span>
+                <span class="review-count">(683 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> Dubai Mall - Downtown Dubai</p>
+              <div class="card-tags"><span class="tag">Specialty Coffee</span><span class="tag">Downtown</span></div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Risen Waterfront — 4.9 -->
+        <article class="listing-card">
+          <a href="listing/risen-caf-and-artisanal-bakery-waterfront.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/risen-caf-and-artisanal-bakery-waterfront.webp" alt="Risen Café Waterfront" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Cafe & Restaurant</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Risen Café — Waterfront</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.9</span>
+                <span class="review-count">(927 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> Marasi Dr - Business Bay</p>
+              <div class="card-tags"><span class="tag">Cafe & Restaurant</span><span class="tag">Business Bay</span></div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AD: IN-FEED ═══ -->
+  <div class="container ads-row">
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+  </div>
+
+  <!-- ═══ RECENTLY ADDED ═══ -->
+  <section class="section fade-in">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <span class="section__label">New Arrivals</span>
+          <h2 class="section__title">Recently Added</h2>
+          <p class="section__subtitle mb-0">The latest additions to our growing directory.</p>
+        </div>
+      </div>
+      <div class="listings__grid">
+        <article class="listing-card">
+          <a href="listing/the-coffee-merchant.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/the-coffee-merchant.webp" alt="The Coffee Merchant" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Specialty Coffee</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">The Coffee Merchant</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.9</span>
+                <span class="review-count">(366 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> AG Tower - Business Bay</p>
+              <div class="card-tags"><span class="tag">Specialty Coffee</span><span class="tag">Business Bay</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="listing-card">
+          <a href="listing/cafe-wayfarer.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/cafe-wayfarer.webp" alt="Cafe Wayfarer" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Specialty Coffee</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Cafe Wayfarer</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.8</span>
+                <span class="review-count">(244 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> Gate Avenue - DIFC</p>
+              <div class="card-tags"><span class="tag">Specialty Coffee</span><span class="tag">DIFC</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="listing-card">
+          <a href="listing/coterra-coffee-roasters.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/coterra-coffee-roasters.webp" alt="Coterra Coffee Roasters" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Roastery</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Coterra Coffee Roasters</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.8</span>
+                <span class="review-count">(466 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> 18 9th St - Umm Ramool</p>
+              <div class="card-tags"><span class="tag">Roastery</span><span class="tag">Artisan Coffee</span></div>
+            </div>
+          </a>
+        </article>
+
+        <article class="listing-card">
+          <a href="listing/blacksmith-coffee-company-al-quoz-dubai.html" class="card-link">
+            <div class="card-image">
+              <img src="assets/images/listings/blacksmith-coffee-company-al-quoz-dubai.webp" alt="Blacksmith Coffee Company" loading="lazy" width="400" height="300">
+              <span class="card-category-badge">Specialty Coffee</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Blacksmith Coffee Company</h3>
+              <div class="card-rating">
+                <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+                <span class="rating-number">4.9</span>
+                <span class="review-count">(67 reviews)</span>
+              </div>
+              <p class="card-address"><i data-lucide="map-pin"></i> 26th St - Al Quoz</p>
+              <div class="card-tags"><span class="tag">Specialty Coffee</span><span class="tag">Al Quoz</span></div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ BLOG PREVIEW ═══ -->
+  <section class="section section--alt fade-in">
+    <div class="container">
+      <div class="section__header">
+        <div>
+          <span class="section__label">From the Blog</span>
+          <h2 class="section__title">Coffee Stories</h2>
+          <p class="section__subtitle mb-0">Insights, guides, and stories from Dubai's coffee scene.</p>
+        </div>
+      </div>
+      <div class="blog__grid">
+        <article class="blog-card">
+          <div class="blog-card__image">
+            <img src="assets/images/blog-blog-specialty.webp" alt="Specialty coffee guide" loading="lazy" width="600" height="340">
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__category">Guide</div>
+            <h3 class="blog-card__title">The Rise of Specialty Coffee in Dubai</h3>
+            <p class="blog-card__excerpt">How Dubai became one of the world's most exciting specialty coffee destinations, from third-wave roasters to award-winning baristas.</p>
+            <div class="blog-card__meta">
+              <span>5 min read</span>
+              <span class="blog-card__readmore">Read More &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__image">
+            <img src="assets/images/blog-blog-neighborhoods.webp" alt="Neighborhood guide" loading="lazy" width="600" height="340">
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__category">Neighborhoods</div>
+            <h3 class="blog-card__title">Best Coffee Neighborhoods in Dubai</h3>
+            <p class="blog-card__excerpt">From the creative energy of Al Quoz to the waterfront charm of Dubai Marina — discover the best areas for coffee lovers.</p>
+            <div class="blog-card__meta">
+              <span>4 min read</span>
+              <span class="blog-card__readmore">Read More &rarr;</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__image">
+            <img src="assets/images/blog-blog-culture.webp" alt="Coffee culture" loading="lazy" width="600" height="340">
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__category">Culture</div>
+            <h3 class="blog-card__title">Dubai's Unique Coffee Culture</h3>
+            <p class="blog-card__excerpt">Exploring the blend of traditional Arabic coffee heritage and modern specialty culture that makes Dubai's cafe scene truly unique.</p>
+            <div class="blog-card__meta">
+              <span>6 min read</span>
+              <span class="blog-card__readmore">Read More &rarr;</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="blog.html" class="btn btn-outline">View All Articles &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AD: BOTTOM ROW ═══ -->
+  <div class="container ads-row">
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+    <div class="ad-slot ad-slot--medium">Advertisement — 300×250</div>
+  </div>
+
+  <!-- ═══ VIEW ALL CTA ═══ -->
+  <section class="section text-center">
+    <div class="container">
+      <h2 class="section__title">Ready to Explore?</h2>
+      <p class="section__subtitle" style="margin: 0 auto 2rem;">Browse all 25+ coffee shops with filters, ratings, and reviews.</p>
+      <a href="listings.html" class="btn btn-primary btn-lg">View All Coffee Shops</a>
+    </div>
+  </section>
+
+  <!-- ═══ CTA OWNER ═══ -->
+  <section class="section cta-owner fade-in">
+    <div class="container">
+      <div class="cta-owner__content">
+        <h2 class="cta-owner__title">Own a Coffee Shop in Dubai?</h2>
+        <p class="cta-owner__desc">Get your cafe listed and reach thousands of coffee lovers. Boost your visibility with premium placement, reviews, and analytics.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="premium-listing.html" class="btn btn-gold btn-lg">Get Premium Listing</a>
+          <a href="get-site.html" class="btn btn-primary btn-lg">Get a fond.coffee Site</a>
+          <a href="listing/premium-template.html" class="btn btn-white btn-lg">See Premium Example</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene. Discover specialty cafes, roasteries, and hidden gems across the city.</p>
+          <div class="footer__social">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Directory</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html">All Coffee Shops</a></li>
+            <li><a href="category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="category/roastery.html">Roasteries</a></li>
+            <li><a href="category/cafe-restaurant.html">Cafe & Restaurant</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="premium-listing.html">Premium Listing</a></li>
+            <li><a href="get-site.html">Get a fond.coffee Site</a></li>
+            <li><a href="listing/premium-template.html">Premium Listing</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="listings.html#area=Marina">Dubai Marina</a></li>
+            <li><a href="listings.html#area=DIFC">DIFC</a></li>
+            <li><a href="listings.html#area=JBR">JBR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/cafes-data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

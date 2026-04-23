@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jumeirah beach | Dubai Coffee Guide</title>
+  <meta name="description" content="A beachside specialty coffee spot at Jumeirah Beach Residence offering fresh brews with stunning sea views. The perfect place to enjoy your morning coffee with ">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Jumeirah beach | Dubai Coffee Guide">
+  <meta property="og:description" content="A beachside specialty coffee spot at Jumeirah Beach Residence offering fresh brews with stunning sea views. The perfect place to enjoy your morning coffee with ">
+  <meta property="og:image" content="../assets/images/listings/jumeirah-beach.webp">
+  <meta property="og:type" content="place">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Jumeirah beach",
+    "description": "A beachside specialty coffee spot at Jumeirah Beach Residence offering fresh brews with stunning sea views. The perfect place to enjoy your morning coffee with the sound of waves.",
+    "address": "34HM+4G4 - The Walk - Marsa Dubai - Jumeirah Beach Residence",
+    
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.0777533,
+      "longitude": 55.1338275
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "14"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__brand">
+        <span class="nav__logo-icon">&#9749;</span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-city">Dubai</span>
+          <span class="nav__logo-tagline">Coffee Guide</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <button class="nav__close" id="navClose" aria-label="Close menu">&times;</button>
+        <a href="../index.html" class="nav__link">Home</a>
+        <a href="../listings.html" class="nav__link">Coffee Shops</a>
+        <a href="../category/specialty.html" class="nav__link">Specialty</a>
+        <a href="../category/roastery.html" class="nav__link">Roasteries</a>
+        <a href="../blog.html" class="nav__link">Blog</a>
+        <a href="../contact.html" class="nav__link">Contact</a>
+        <a href="../contact.html" class="btn btn-primary nav__mobile-cta" style="display:none;">Add Your Cafe</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <a href="../premium-listing.html" class="btn btn-gold nav__cta" style="font-size:0.8125rem;">Premium Listing</a>
+        <a href="https://dubai.fond.coffee/get-site" class="btn btn-primary nav__cta" style="font-size:0.8125rem;">Get a Site</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb__sep">/</span>
+      <a href="../category/specialty.html">Specialty Coffee</a>
+      <span class="breadcrumb__sep">/</span>
+      <span class="breadcrumb__current">Jumeirah beach</span>
+    </div>
+  </div>
+
+  <section class="listing-hero">
+    <div class="listing-hero__image">
+      <img src="../assets/images/listings/jumeirah-beach.webp" alt="Jumeirah beach" width="1200" height="600">
+      <div class="listing-hero__overlay">
+        <span class="listing-header__category">Specialty Coffee</span>
+        <h1>Jumeirah beach</h1>
+        <div class="card-rating">
+          <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+          <span class="rating-number" style="color: #fff;">4.9</span>
+          <span class="review-count" style="color: rgba(255,255,255,0.8);">(14 reviews)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="listing-content">
+    <div class="container">
+      <div class="listing-content__main">
+        <div class="quick-actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=25.0777533,55.1338275" class="quick-action-btn" target="_blank" rel="noopener noreferrer"><i data-lucide="navigation"></i> Get Directions</a>
+          
+          <button class="quick-action-btn" id="shareBtn"><i data-lucide="share-2"></i> Share</button>
+        </div>
+
+        <div class="listing-section">
+          <h2>About</h2>
+          <p>A beachside specialty coffee spot at Jumeirah Beach Residence offering fresh brews with stunning sea views. The perfect place to enjoy your morning coffee with the sound of waves.</p>
+        </div>
+
+        <div class="listing-tags">
+          <span class="tag">Specialty Coffee</span><span class="tag">Dubai Marina</span><span class="tag">Highly Rated</span>
+        </div>
+
+        <div class="listing-section">
+          <h2>Opening Hours</h2>
+          <table class="hours-table"><tbody><tr class="closed"><td>Mon</td><td>Closed</td></tr>
+<tr class="closed"><td>Tue</td><td>Closed</td></tr>
+<tr class="closed"><td>Wed</td><td>Closed</td></tr>
+<tr class="closed"><td>Thu</td><td>Closed</td></tr>
+<tr class="closed"><td>Fri</td><td>Closed</td></tr>
+<tr class="closed"><td>Sat</td><td>Closed</td></tr>
+<tr class="closed"><td>Sun</td><td>Closed</td></tr>
+</tbody></table>
+        </div>
+
+        <div class="listing-section">
+          <h2>Location</h2>
+          <div class="listing-map" id="listingMap" data-lat="25.0777533" data-lng="55.1338275"></div>
+        </div>
+      </div>
+
+      <aside class="listing-content__sidebar">
+        <div class="listing-sidebar-card">
+          <h3>Contact Info</h3>
+          <ul class="listing-sidebar__info">
+            <li><i data-lucide="map-pin"></i> 34HM+4G4 - The Walk - Marsa Dubai - Jumeirah Beach Residence</li>
+            
+          </ul>
+          <div class="listing-sidebar__actions">
+            
+            <a href="https://www.google.com/maps/dir/?api=1&destination=25.0777533,55.1338275" class="btn btn-outline btn-block" target="_blank" rel="noopener noreferrer"><i data-lucide="navigation"></i> Get Directions</a>
+          </div>
+        </div>
+
+        <div class="ad-slot ad-slot--sidebar">Advertisement — 300×600</div>
+
+        <div class="listing-sidebar-card listing-sidebar-card--cta">
+          <h3>Own a coffee shop in Dubai?</h3>
+          <p>Get your cafe listed and reach thousands of coffee lovers. We'll help you build visibility for your business.</p>
+          <a href="../contact.html" class="btn btn-primary btn-block">Claim Your Listing</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div class="ad-slot ad-slot--footer">Advertisement — 728×90</div>
+
+  <section class="section related">
+    <div class="container">
+      <h2 class="section__title">Similar Coffee Shops</h2>
+      <div class="listings__grid listings__grid--small">
+        <article class="listing-card">
+  <a href="l-eto.html" class="card-link">
+    <div class="card-image">
+      <img src="../assets/images/listings/l-eto.webp" alt="L&#x27;ETO" loading="lazy" width="400" height="300">
+      <span class="card-category-badge">Specialty Coffee</span>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">L&#x27;ETO</h3>
+      <div class="card-rating">
+        <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span></span>
+        <span class="rating-number">5.0</span>
+        <span class="review-count">(2,408 reviews)</span>
+      </div>
+      <p class="card-address"><i data-lucide="map-pin"></i> Ground Floor, Marina Mall - Sheikh Zayed Rd - Marsa Dubai Ma</p>
+    </div>
+  </a>
+</article>
+<article class="listing-card">
+  <a href="joe-s-caf-dubai.html" class="card-link">
+    <div class="card-image">
+      <img src="../assets/images/listings/joe-s-caf-dubai.webp" alt="Joe&#x27;s Café Dubai" loading="lazy" width="400" height="300">
+      <span class="card-category-badge">Specialty Coffee</span>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Joe&#x27;s Café Dubai</h3>
+      <div class="card-rating">
+        <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+        <span class="rating-number">4.9</span>
+        <span class="review-count">(25,198 reviews)</span>
+      </div>
+      <p class="card-address"><i data-lucide="map-pin"></i> fashion Avenue First Floor, Dubai Mall Star Atrium - Gate 6 </p>
+    </div>
+  </a>
+</article>
+<article class="listing-card">
+  <a href="black-sheep-coffee.html" class="card-link">
+    <div class="card-image">
+      <img src="../assets/images/listings/black-sheep-coffee.webp" alt="Black Sheep Coffee" loading="lazy" width="400" height="300">
+      <span class="card-category-badge">Specialty Coffee</span>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Black Sheep Coffee</h3>
+      <div class="card-rating">
+        <span class="stars"><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star full">&#9733;</span><span class="star half">&#9733;</span></span>
+        <span class="rating-number">4.9</span>
+        <span class="review-count">(683 reviews)</span>
+      </div>
+      <p class="card-address"><i data-lucide="map-pin"></i> Cinema Parking - Black Sheep Coffee, Dubai Mall - Second Flo</p>
+    </div>
+  </a>
+</article>
+
+      </div>
+      <div class="related__back">
+        <a href="../listings.html" class="btn btn-outline">&larr; Back to All Listings</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <span class="footer__logo">&#9749; Dubai Coffee Guide</span>
+          <p class="footer__tagline">Your ultimate guide to Dubai's coffee scene.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Directory</h4>
+          <ul class="footer__links">
+            <li><a href="../listings.html">All Coffee Shops</a></li>
+            <li><a href="../category/specialty.html">Specialty Coffee</a></li>
+            <li><a href="../category/roastery.html">Roasteries</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li><a href="../premium-listing.html">Premium Listing</a></li>
+            <li><a href="https://dubai.fond.coffee/get-site">Get a fond.coffee Site</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Areas</h4>
+          <ul class="footer__links">
+            <li><a href="../listings.html#area=Downtown">Downtown</a></li>
+            <li><a href="../listings.html#area=Marina">Marina</a></li>
+            <li><a href="../listings.html#area=DIFC">DIFC</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dubai Coffee Guide. All rights reserved.</p>
+        <p><a href="https://techsites.ai" target="_blank" rel="noopener noreferrer">Powered by TechSites.ai</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Back to Top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="../assets/js/cafes-data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
