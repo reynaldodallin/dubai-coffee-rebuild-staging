@@ -475,6 +475,31 @@ function initContactForm() {
   });
 }
 
+// ── Hero Parallax ──
+function initHeroParallax() {
+  const bg = document.getElementById('heroBg');
+  if (!bg) return;
+  // Skip on mobile or reduced-motion
+  const mq = window.matchMedia('(max-width: 768px), (prefers-reduced-motion: reduce)');
+  if (mq.matches) return;
+
+  let ticking = false;
+  const update = () => {
+    const hero = document.getElementById('heroParallax');
+    if (!hero) return;
+    const rect = hero.getBoundingClientRect();
+    // Only run when hero is in/near viewport
+    if (rect.bottom < 0 || rect.top > window.innerHeight) { ticking = false; return; }
+    const y = Math.max(0, -rect.top) * 0.35;
+    bg.style.transform = `translate3d(0, ${y}px, 0)`;
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  update();
+}
+
 // ── Init ──
 document.addEventListener('DOMContentLoaded', () => {
   // Apply saved theme (default: dark)
@@ -488,6 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initScrollTop();
   initFadeIn();
+  initHeroParallax();
   initHomeSearch();
   initListingsPage();
   initCategoryPage();
