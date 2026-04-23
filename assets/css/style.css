@@ -729,6 +729,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 .pricing-card__features li:last-child { border-bottom: none; }
 
+/* Launch promo banner (scarcity) */
+.promo-banner {
+  max-width: 720px; margin: 0 auto 2.5rem; padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, rgba(212, 165, 116, 0.14), rgba(196, 141, 88, 0.08));
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; gap: 1rem; justify-content: center;
+  flex-wrap: wrap; text-align: center;
+}
+.promo-banner__badge {
+  background: var(--color-accent); color: #fff; font-weight: 700; font-size: 0.75rem;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem; border-radius: 999px; white-space: nowrap;
+}
+.promo-banner__text { font-size: 0.95rem; color: var(--color-text); margin: 0; }
+.promo-banner__text strong { color: var(--color-accent); }
+.promo-banner__count { font-weight: 700; color: var(--color-text); }
+
+/* Price with strikethrough (original) + promo price */
+.pricing-card__price-original {
+  display: inline-block; font-size: 1.25rem; color: var(--color-text-muted);
+  text-decoration: line-through; font-weight: 500; margin-right: 0.5rem;
+  font-family: var(--font-heading);
+}
+.pricing-card__promo-note {
+  font-size: 0.75rem; color: var(--color-accent); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em; margin-top: 0.25rem;
+}
+
 /* ══════════════════════════
    RELATED / BACK
    ══════════════════════════ */

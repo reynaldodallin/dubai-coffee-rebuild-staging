@@ -668,13 +668,20 @@
         <p class="section__subtitle" style="margin: 0 auto;">Simple, predictable pricing. No setup fees. Cancel anytime.</p>
       </div>
 
+      <!-- Launch Promo Banner (scarcity) -->
+      <div class="promo-banner">
+        <span class="promo-banner__badge">★ Launch Offer</span>
+        <p class="promo-banner__text"><strong>20% OFF</strong> for the first 3 months — limited to the <span class="promo-banner__count">first 50 coffee shops</span> on dubai.fond.coffee.</p>
+      </div>
+
       <!-- Card-style pricing (mobile-friendly) -->
       <div class="pricing-grid" style="margin-bottom: 4rem;">
         <!-- Standard -->
         <div class="pricing-card">
           <div class="pricing-card__name">Standard</div>
-          <div class="pricing-card__price">$19</div>
-          <div class="pricing-card__period">per month</div>
+          <div class="pricing-card__price"><span class="pricing-card__price-original">$19</span>$15</div>
+          <div class="pricing-card__period">per month · first 3 months</div>
+          <div class="pricing-card__promo-note">Then $19/mo · first 50 only</div>
           <ul class="pricing-card__features">
             <li>Basic listing page</li>
             <li>Photo gallery (up to 5)</li>
@@ -688,8 +695,9 @@
         <!-- Premium (featured) -->
         <div class="pricing-card pricing-card--featured">
           <div class="pricing-card__name">Premium</div>
-          <div class="pricing-card__price">$59</div>
-          <div class="pricing-card__period">per month</div>
+          <div class="pricing-card__price"><span class="pricing-card__price-original">$59</span>$47</div>
+          <div class="pricing-card__period">per month · first 3 months</div>
+          <div class="pricing-card__promo-note">Then $59/mo · first 50 only</div>
           <ul class="pricing-card__features">
             <li>Everything in Standard</li>
             <li>Verified badge</li>
@@ -708,8 +716,9 @@
         <!-- Elite -->
         <div class="pricing-card">
           <div class="pricing-card__name">Elite</div>
-          <div class="pricing-card__price">$129</div>
-          <div class="pricing-card__period">per month</div>
+          <div class="pricing-card__price"><span class="pricing-card__price-original">$129</span>$103</div>
+          <div class="pricing-card__period">per month · first 3 months</div>
+          <div class="pricing-card__promo-note">Then $129/mo · first 50 only</div>
           <ul class="pricing-card__features">
             <li>Everything in Premium</li>
             <li>Featured on homepage</li>
@@ -733,18 +742,18 @@
               <th scope="col">Feature</th>
               <th scope="col">
                 Standard
-                <span class="col-price">$19</span>
-                <span class="col-period">per month</span>
+                <span class="col-price"><span class="pricing-card__price-original">$19</span>$15</span>
+                <span class="col-period">first 3 months · then $19/mo</span>
               </th>
               <th scope="col" class="col-premium">
                 ★ Premium
-                <span class="col-price">$59</span>
-                <span class="col-period">per month</span>
+                <span class="col-price"><span class="pricing-card__price-original">$59</span>$47</span>
+                <span class="col-period">first 3 months · then $59/mo</span>
               </th>
               <th scope="col">
                 Elite
-                <span class="col-price">$129</span>
-                <span class="col-period">per month</span>
+                <span class="col-price"><span class="pricing-card__price-original">$129</span>$103</span>
+                <span class="col-period">first 3 months · then $129/mo</span>
               </th>
             </tr>
           </thead>
